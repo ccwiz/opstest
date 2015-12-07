@@ -1,4 +1,4 @@
-Chef::Log.info('I am a message from the #{recipe_name} recipe in the #{cookbook_name} cookbook.')
+Chef::Log.info("CUSTOM PARAMS  tenantid: #{node['tenantid']} agentIP #{node['agent_ip']} visitorIP #{node['visitor_ip']} RCI_IP #{node['rci_ip']}")
 
 cookbook_file "/tmp/test.py" do
   source "test.py"
@@ -6,5 +6,5 @@ cookbook_file "/tmp/test.py" do
 end
 
 execute "install my lib" do
-  command "sudo /tmp/test.py"
+  command "sudo python /tmp/test.py"
 end
