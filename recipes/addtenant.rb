@@ -5,7 +5,7 @@ agentip = node['agent_ip']
 visitorip = node['visitor_ip']
 rciip = node['rci_ip']
 
-if tenantid && agentip && vistiorip && rciip
+if tenantid && agentip && visitorip && rciip
 	cookbook_file "/tmp/test.py" do
 	  source "test.py"
 	  mode 0755
