@@ -12,6 +12,6 @@ if tenantid && agentip && vistiorip && rciip
 	end
 
 	execute "install my lib" do
-	  command "sudo python /tmp/test.py #{node['tenantid']}"
+	  command "sudo python /tmp/test.py #{tenantid} #{agentip} #{visitorip} #{rciip}"
 	end
 end
