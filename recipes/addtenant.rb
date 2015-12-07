@@ -6,12 +6,12 @@ visitorip = node['visitor_ip']
 rciip = node['rci_ip']
 
 if tenantid && agentip && visitorip && rciip
-	cookbook_file "/tmp/test.py" do
-	  source "test.py"
+	cookbook_file "/tmp/createproxyconf.py" do
+	  source "createproxyconf.py"
 	  mode 0755
 	end
 
 	execute "install my lib" do
-	  command "sudo python /tmp/test.py #{tenantid} #{agentip} #{visitorip} #{rciip}"
+	  command "sudo python /tmp/createproxyconf.py #{tenantid} #{agentip} #{visitorip} #{rciip}"
 	end
 end
