@@ -13,13 +13,13 @@ def appendToFile(file, data):
 def doUpstreamConfig(tenant, ECF_IP, ECF_visitor_IP, RCI_IP):
 	upstreamTempl = Template('''
 upstream $t{
-	server $ecfip:443;
+	server $ecfip:8443;
 }                       
 upstream ${t}_visitor{
-	server $ecfv:443;
+	server $ecfv:8443;
 }
 upstream ${t}_rci{
-	server $rciip:443;
+	server $rciip:8443;
 }
 	''')
 	
