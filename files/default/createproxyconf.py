@@ -30,7 +30,7 @@ def doLocationConfig(tenant):
 	locTempl = Template('''
 # redirect based on tenant -> $t  
 location ^~ /$t/ {
-	location ^~ /$t/RCI {
+	location ^~ /$t/RCI/ {
 		location ^~/$t/RCI/rest/tasks/ {
 			auth_basic           "restricted";
 			auth_basic_user_file /etc/nginx/.htpasswd;
